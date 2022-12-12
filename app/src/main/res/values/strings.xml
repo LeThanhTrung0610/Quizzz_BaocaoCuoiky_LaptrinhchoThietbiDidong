@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Quiz</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="true_answer">True</string>
+    <string name="false_answer">False</string>
+    <string name="complete">Finish</string>
+    <string name="share">Share</string>
+
+    <string name="question">Câu hỏi:</string>
+    <string name="progress">/5</string>
+    <string name="history_fragment">Work under development…</string>
+    <string name="topic1">Math</string>
+    <string name="topic2">Art</string>
+    <string name="topic3">History</string>
+    <string name="topic4">Science</string>
+    <string name="topic5">Sport</string>
+    <string name="topic6">Literature</string>
+    <string name="info">Dev: \n - Chu Tuấn Anh \n - Lê Thành Trung \n Contact: \n
+                        20021481@vnu.edu.vn \n 20021590@vnu.edu.vn</string>
+</resources>
