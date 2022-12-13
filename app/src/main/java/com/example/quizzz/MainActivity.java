@@ -77,12 +77,19 @@ public class MainActivity extends AppCompatActivity {
             case R.id.toFeedbackFragment:
                 String emails = "20021481@vnu.edu.vn, 20021590@vnu.edu.vn";
                 String[] addresses = emails.split(",");
+                int versionCode = BuildConfig.VERSION_CODE;
+                String versionName = BuildConfig.VERSION_NAME;
+                String userVersion = versionCode + versionName;
 
                 Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
                 emailIntent.setData(Uri.parse("mailto:"));
                 emailIntent.putExtra(Intent.EXTRA_EMAIL, addresses);
-                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Góp ý: ");
-                startActivity(Intent.createChooser(emailIntent, "Send email via:"));
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Feedback: " + userVersion);
+                try {
+                    startActivity(Intent.createChooser(emailIntent, "Send email via:"));
+                } catch (android.content.ActivityNotFoundException ex) {
+                    Toast.makeText(MainActivity.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+                }
                 return true;
         }
 
